@@ -1,8 +1,21 @@
 import subprocess
 
-cmd = "ifconfig | grep en0"
+############################# GUI #########################################################
+# TODO: Create Protoype for Client Gui (Runs on MainThread)
+#     - Connect to server
+#     - Send get command from user
+#     - Send to engine function
+############################# After Engine #########################################################
+#     - Receive output from engine function
 
-p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-for line in p.stdout.readlines():
-    print (str(line))
-retval = p.wait()
+############################# ENGINE #########################################################
+# TODO: Create engine for client function (Runs on new thread)
+#     - Receive command from gui
+#     - Send command to server (Using global socket has been initialized in main thread (GUI))
+#     - Receive output from server
+#     - Send command to run sys command
+#     - Send output to gui
+
+
+def engine(cmd):
+    pass

@@ -14,7 +14,6 @@ def handle_cmd(cmd):
     # if cmd = "check if ip is up":
         # output = "ping -n 1 " + ip
 
-
     return output
 
 # Todo: Ask when do we need to close the connection to the client????????
